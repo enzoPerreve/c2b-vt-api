@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import Optional
 from collections import defaultdict
+import uvicorn
+import os
 
 app = FastAPI()
 
@@ -67,9 +69,6 @@ def get_asset_id(data: list[Item]):
     return result
 
 if __name__ == "__main__":
-    import uvicorn
-    import os
     port = int(os.environ.get("PORT", 8000))
-    print(f"Starting on port {port}")
     print(f"Starting on port {port}")
     uvicorn.run(app, host="0.0.0.0", port=port)
