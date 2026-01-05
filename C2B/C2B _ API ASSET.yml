@@ -1,0 +1,21 @@
+info:
+  name: C2B _ API ASSET
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: https://web-production-c114.up.railway.app/get-asset-id
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: '[{"Flow_code":"A","Main_asset_code":"15003997","Ordering_Client":"0001","Plant_code":"A","Asset_label":"A","quantity":1,"Inventory_Number":"T0000000030","WBS":"OPX/AA50476 .02.01","Supplier_code":9233,"Location_supplier":null,"Manufacturer":"COOPER","Location_supplier_Adress":"1010 Rue Ste Catherine Ouest","Postal_code":"H3B0H2","City":"Montreal","Country_Code":"CA","Supplier_name":"COOPER","Manufacturer_country":"FR"}]'
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
