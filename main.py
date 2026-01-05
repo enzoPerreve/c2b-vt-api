@@ -34,6 +34,7 @@ asset_to_subs = defaultdict(set)
 
 @app.post("/get-asset-id")
 def get_asset_id(data: list[Item]):
+    global asset_counter, inventory_to_asset, inventory_to_sub, asset_to_subs
     result = []
     for item in data:
         inv = item.Inventory_Number
