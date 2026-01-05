@@ -51,6 +51,24 @@ A FastAPI application for asset management.
    git push heroku main
    ```
 
+## Deployment to Railway (Free)
+
+1. Push the code to GitHub:
+   - Create a new repository on GitHub.
+   - Run:
+     ```bash
+     git remote add origin https://github.com/your-username/your-repo-name.git
+     git push -u origin master
+     ```
+
+2. Deploy on Railway:
+   - Go to [Railway.app](https://railway.app) and sign up (free).
+   - Connect your GitHub account.
+   - Create a new project and select "Deploy from GitHub repo".
+   - Choose your repository.
+   - Railway will automatically detect the Python app and deploy it.
+   - Once deployed, you'll get a free URL like `https://your-app-name.up.railway.app`.
+
 ## API Endpoint
 
 - POST `/get-asset-id`: Accepts a list of items and returns asset codes based on Flow_code logic.
